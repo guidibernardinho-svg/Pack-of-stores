@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PS3 Stores Pack</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+    }
+    .card {
+      background: #222;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎮 PS3 Stores Pack</h1>
+
+<div id="content"></div>
+
+<script>
+fetch('stores/games.json')
+  .then(res => res.json())
+  .then(data => {
+    let html = '';
+    data.forEach(game => {
+      html += `
+        <div class="card">
+          <h2>${game.name}</h2>
+          <p>${game.size}</p>
+          <a href="${game.link}">Download</a>
+        </div>
+      `;
+    });
+    document.getElementById('content').innerHTML = html;
+  });
+</script>
+
+</body>
+</html>
