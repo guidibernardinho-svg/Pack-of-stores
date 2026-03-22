@@ -1,0 +1,12 @@
+[
+  {
+    "name": "GTA V",
+    "size": "20GB",
+    "link": "https://exemplo.com/gta.pkg"
+  },
+  {
+    "name": "FIFA 19",
+    "size": "15GB",
+    "link": "https://exemplo.com/fifa.pkg"
+  }
+]
